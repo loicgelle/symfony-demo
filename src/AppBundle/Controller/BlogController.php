@@ -42,7 +42,7 @@ class BlogController extends Controller
     {
         $posts = $this->getDoctrine()->getRepository('AppBundle:Post')->findLatest($page);
 
-        return $this->rener('blog/index.html.twig', array('posts' => $posts));
+        return $this->render('blog/index.html.twig', array('posts' => $posts));
     }
 
     /**
